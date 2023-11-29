@@ -19,15 +19,17 @@ pip install -r requirements.txt
 ```
 
 Download the [TAC2008](https://tac.nist.gov/2008/summarization/) and [DUC2004](https://github.com/UsmanNiazi/DUC-2004-Dataset) from the official providers.
-To download our pre-processed version of the CrossSum dataset, run: 
+To download our pre-processed version of the CrossSum dataset, run:
 ```
-curl ftp://ftp.priberam.com/cera-summ/crosssum_data.tar.gz --user "ftp.priberam.com|anonymous":anonymous -o ./crosssum_data.tar.gz)
+curl ftp://ftp.priberam.com/cera-summ/crosssum_data.tar.gz --user "ftp.priberam.com|anonymous":anonymous -o ./crosssum_data.tar.gz
+tar -xzvf crosssum_data.tar.gz
 ```
 By using this data you are agreeing with the license terms of the [original dataset](https://github.com/csebuetnlp/CrossSum).
 
 To download the trained models run:
 ```
 curl ftp://ftp.priberam.com/cera-summ/cera-summ_models.tar.gz --user "ftp.priberam.com|anonymous":anonymous -o ./cera-summ_models.tar.gz
+tar -xzvf cera-summ_models.tar.gz
 ```
 
 
@@ -35,7 +37,7 @@ curl ftp://ftp.priberam.com/cera-summ/cera-summ_models.tar.gz --user "ftp.priber
 
 E.g. To train the CeRAI model on the CrossSum dataset, run:
 ```
-python CLI.py fit -c centroid_attention/cross_sum_config.yaml --trainer.model.interpolation 1 --trainer.data.train_dataset_path ./CrossSum/train.jsonl --trainer.data.validation_dataset_path ./CrossSum/val.jsonl --trainer.data.test_dataset_path ./CrossSum/test.jsonl --trainer.R2_R_checkpoint.filename CeRAI-CrossSum-BestR2R
+python CLI.py fit -c centroid_attention/cross_sum_config.yaml --model.interpolation 1 --data.train_dataset_path ./CrossSum/train.jsonl --data.validation_dataset_path ./CrossSum/val.jsonl --data.test_dataset_path ./CrossSum/test.jsonl --R2_R_checkpoint.filename ./checkpoints/CeRAI-CrossSum-BestR2R.ckpt
 ```
 
 **Further configuration options**:<br>
@@ -64,6 +66,6 @@ python main.py --dataset_path ./CrossSum/test_zs.jsonl --centroid_model_path ./c
 ```
 
 ## Citation
-TODO 
+TODO
 
 

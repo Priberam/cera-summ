@@ -1,7 +1,9 @@
+absl-py==2.0.0
 datasets==2.11.0
 EasyNMT==2.0.2
 icu_tokenizer==0.0.1
 iso639==0.1.4
+jsonargparse==4.27.1
 lightning==2.0.3
 lxml==4.9.2
 nltk==3.7
