@@ -4,12 +4,12 @@ from typing import Optional
 import lightning.pytorch as pl
 import numpy as np
 import torch
-from centroidsumm.centroid_attention.datasets_utils import (
+from centroid_attention.datasets_utils import (
     pad_sentences_order,
     prepare_dataloader,
     sequence_mask,
 )
-from centroidsumm.summarizer.data_loaders import create_data_loader
+from summarizer.data_loaders import create_data_loader
 from easynmt import EasyNMT
 from sentence_transformers import SentenceTransformer
 from torch.utils.data import DataLoader
