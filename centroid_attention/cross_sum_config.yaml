@@ -44,6 +44,7 @@ trainer:
   sync_batchnorm: false
   reload_dataloaders_every_n_epochs: 0
   default_root_dir: ./checkpoints 
+model:
   embed_dim: 512
   num_positional_embeddings: 4 
   num_heads: 1
