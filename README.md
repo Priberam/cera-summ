@@ -60,7 +60,7 @@ python CLI.py fit -c centroid_attention/cross_sum_config.yaml --trainer.model.in
 
 E.g. To evaluate the CeRAI model and the summarization algorithm on the CrossSum-ZS dataset, run:
 ```
-python main.py --dataset_path ./CrossSum/test_zs.jsonl --centroid_model_path ./checkpoints/CeRAI-CrossSum-BestR2R.ckpt --partition test --dataset_name CrossSum --reference_type single_ref --summarizer_type ghalandari --sentences n_first --n 9 --budget 100 --beam_width 5 --counter_limt 9 --alpha 0 --centroid_type estimated
+python main.py --dataset_path ./CrossSum/test_zs.jsonl --centroid_model_path ./checkpoints/CeRAI-CrossSum-BestR2R.ckpt --partition test --dataset_name CrossSum --reference_type single_ref --summarizer_type ghalandari --sentences n_first --n 9 --budget 100 --beam_width 5 --counter_limit 9 --alpha 0 --centroid_type estimated
 ```
 
 ## Citation
