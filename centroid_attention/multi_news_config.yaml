@@ -1,0 +1,115 @@
+seed_everything: 12 
+trainer:
+  accelerator: gpu
+  strategy: auto
+  devices: 1
+  num_nodes: 1
+  precision: 32-true
+  # logger:
+  #   class_path: 
+  #   init_args:
+  #     run_name: CeRA-MultiNews
+  #     experiment_name: 
+  #     tracking_uri: 
+  callbacks: null
+  fast_dev_run: false
+  max_epochs: -1
+  min_epochs: -1
+  max_steps: -1
+  min_steps: null
+  max_time: null
+  limit_train_batches: null
+  limit_val_batches: null
+  limit_test_batches: null
+  limit_predict_batches: null
+  overfit_batches: 0.0
+  val_check_interval: null
+  check_val_every_n_epoch: 1
+  num_sanity_val_steps: 1
+  log_every_n_steps: 50
+  enable_checkpointing: true
+  enable_progress_bar: null
+  enable_model_summary: null
+  accumulate_grad_batches: 1
+  gradient_clip_val: null
+  gradient_clip_algorithm: null
+  deterministic: true
+  benchmark: null
+  inference_mode: true
+  use_distributed_sampler: false
+  profiler: null
+  detect_anomaly: false
+  barebones: false
+  plugins: null
+  sync_batchnorm: false
+  reload_dataloaders_every_n_epochs: 0
+  default_root_dir: ./checkpoints 
+model:
+  embed_dim: 512
+  num_positional_embeddings: 35 
+  num_heads: 1
+  dropout:  0 
+  norm_1: true
+  input_layernorm: true
+  beforeFC_output_layernorm: true
+  afterFC_output_layernorm: false
+  concat_meanpool: true
+  concat_cosine: false 
+  use_residual: false
+  use_bias: true
+  batch_size: 2
+  learning_rate:  5e-4 
+  use_scheduler: true
+  scheduler_step_size: 3 
+  scheduler_gamma:  0.1 
+  interpolation: false #true  Change this flag to true to train the CeRAI model instead of the CeRA model
+  loss_type: "cosine"
+  budget: 230 
+data:
+  class_path: centroid_attention.model_datasets.MultiNewsDataModule
+  init_args:
+    use_pickle: false
+    save_pickle: true
+    pickle_path: ./MultiNewsAttmodelsData.pickle
+early_stopping:
+  monitor: R2_R 
+  min_delta: 0.0
+  patience: 5
+  verbose: false
+  mode: max 
+  strict: true
+  check_finite: true
+  stopping_threshold: null
+  divergence_threshold: null
+  check_on_train_epoch_end: null
+  log_rank_zero_only: false
+val_loss_checkpoint:
+  dirpath: null
+  filename: '{epoch}-{val_loss:.2f}'
+  monitor: val_loss
+  verbose: false
+  save_last: null
+  save_top_k: 1
+  save_weights_only: false
+  mode: min
+  auto_insert_metric_name: true
+  every_n_train_steps: null
+  train_time_interval: null
+  every_n_epochs: null
+  save_on_train_epoch_end: null
+ckpt_path: null
+R2_R_checkpoint:
+  dirpath: null
+  filename: '{epoch}-{R2_R:.6f}'
+  monitor: R2_R
+  verbose: false
+  save_last: null
+  save_top_k: 1
+  save_weights_only: false
+  mode: max
+  auto_insert_metric_name: true
+  every_n_train_steps: null
+  train_time_interval: null
+  every_n_epochs: null
+  save_on_train_epoch_end: null
+ckpt_path: null
