@@ -1,7 +1,7 @@
 # cera-summ
 Source code for the paper: [**Supervising the Centroid Baseline for Extractive Multi-Document Summarization**](https://arxiv.org/abs/2311.17771) <br>
 Authors: Simão Gonçalves, Gonçalo Correia, Diogo Pernes, Afonso Mendes<br>
-Presented at: "The 4th New Frontiers in Summarization (with LLMs) Workshop (NewSumm Workshop 2023)"<br>
+Presented at *The 4th New Frontiers in Summarization (with LLMs) Workshop (NewSumm Workshop 2023)*<br>
 
 
 The code in this project provides the summarization algorithm described in the paper:<br>
@@ -34,7 +34,7 @@ tar -xzvf cera-summ_models.tar.gz
 ```
 
 
-## Model training
+## Model Training
 
 E.g. To train the CeRAI model on the CrossSum dataset, run:
 ```
