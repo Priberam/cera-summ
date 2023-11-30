@@ -65,7 +65,14 @@ E.g. To evaluate the CeRAI model and the summarization algorithm on the CrossSum
 python main.py --dataset_path ./CrossSum/test_zs.jsonl --centroid_model_path ./checkpoints/CeRAI-CrossSum-BestR2R.ckpt --partition test --dataset_name CrossSum --reference_type single_ref --summarizer_type ghalandari --sentences n_first --n 9 --budget 100 --beam_width 5 --counter_limit 9 --alpha 0 --centroid_type estimated
 ```
 
+## License
+
+See the [LICENSE.md](LICENSE.md) file for details.
+
 ## Citation
-TODO
 
+If you use any of the resources in this repository, please cite the following paper:
 
+```
+ToDo
+```
