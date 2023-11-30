@@ -15,6 +15,7 @@ Create a virtual environment and install the required packages
 
 ```
 conda create -n cera-summ python=3.10.10
+conda activate cera-summ
 pip install -r requirements.txt
 ```
 
