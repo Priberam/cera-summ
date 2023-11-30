@@ -1,5 +1,5 @@
 # cera-summ
-Source code for the paper: **"Supervising the Centroid Baseline for Extractive Multi-Document Summarization"** <br>
+Source code for the paper: [**Supervising the Centroid Baseline for Extractive Multi-Document Summarization**](https://arxiv.org/abs/2311.17771) <br>
 Authors: Simão Gonçalves, Gonçalo Correia, Diogo Pernes, Afonso Mendes<br>
 Presented at: "The 4th New Frontiers in Summarization (with LLMs) Workshop (NewSumm Workshop 2023)"<br>
 
