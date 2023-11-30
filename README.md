@@ -74,5 +74,12 @@ See the [LICENSE.md](LICENSE.md) file for details.
 If you use any of the resources in this repository, please cite the following paper:
 
 ```
-ToDo
+@misc{gonçalves2023supervising,
+      title={Supervising the Centroid Baseline for Extractive Multi-Document Summarization},
+      author={Simão Gonçalves and Gonçalo Correia and Diogo Pernes and Afonso Mendes},
+      year={2023},
+      eprint={2311.17771},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
