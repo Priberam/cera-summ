@@ -43,20 +43,20 @@ python CLI.py fit -c centroid_attention/cross_sum_config.yaml --model.interpolat
 
 **Further configuration options**:<br>
   - On the folder "centroid_attention", edit the ".yaml" file corresponding to the dataset in which you want to train your model;
-  - The default hyperparameters in the "trainer->model" field were the ones we used for training our models;
-  - **If you don't have the data stored in disk (1st run)** On the "trainer->data->init_args" field set "use_pickle" to ```false``` if it is the first time you are training the model on the
+  - The default hyperparameters in the "model" field were the ones we used for training our models;
+  - **If you don't have the data stored in disk (1st run)** On the "data->init_args" field set "use_pickle" to ```false``` if it is the first time you are training the model on the
      selected dataset. Also, if you want to (we strongly suggest), you can set "save_pickle" to ```true``` to save the data generated so that next time you train the model you can
      use the data saved in disk instead of waiting for it to be generated again;
- - **If you have the data stored in disk** On the "trainer->data->init_args" field set "use_pickle" to ```true``` and point "pickle_path" to the saved pickle file that was generated on
+ - **If you have the data stored in disk** On the "data->init_args" field set "use_pickle" to ```true``` and point "pickle_path" to the saved pickle file that was generated on
      previous training runs. The data loading process should be faster;
- -  To train a **CeRA** model, "trainer->model->interpolation" should be set to ```false```. To train a **CeRAI** model, set "trainer->model->interpolation" to ```true```;
+ -  To train a **CeRA** model, "model->interpolation" should be set to ```false```. To train a **CeRAI** model, set "model->interpolation" to ```true```;
  -  On "trainer->logger" select the "class_path" logger you want to use;
  -  On "trainer->logger->init_args" choose a name for your run ("run_name"), the experiment name ("experiment_name"), and a "tracking_uri" with an url for the logger page
      where your experiment will run;
  -  Under "trainer", on the "default_root_dir", select a path to a folder where your model checkpoints will be saved. Note that by default we are storing two checkpoints per model,
-     one on the best validation loss and another one on the best R2-R score found on the validation set (these configs can be changed under "trainer->val_loss_checkpoint" and
-     "trainer->R2_R_checkpoint");
- -  By default we are using early stopping on the R2-R score reported during validation, this can also be changed under "trainer->early_stopping".
+     one on the best validation loss and another one on the best R2-R score found on the validation set (these configs can be changed under "val_loss_checkpoint" and
+     "R2_R_checkpoint");
+ -  By default we are using early stopping on the R2-R score reported during validation, this can also be changed under "early_stopping".
 
 
 ## Model Evaluation
