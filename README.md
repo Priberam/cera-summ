@@ -1,5 +1,5 @@
 # cera-summ
-Source code for the paper: [**Supervising the Centroid Baseline for Extractive Multi-Document Summarization**](https://arxiv.org/abs/2311.17771) <br>
+Source code for the paper: [**Supervising the Centroid Baseline for Extractive Multi-Document Summarization**](https://aclanthology.org/2023.newsum-1.9/) <br>
 Authors: Simão Gonçalves, Gonçalo Correia, Diogo Pernes, Afonso Mendes<br>
 Presented at *The 4th New Frontiers in Summarization (with LLMs) Workshop (NewSumm Workshop 2023)*<br>
 
@@ -75,11 +75,19 @@ See the [LICENSE.md](LICENSE.md) file for details.
 If you use any of the resources in this repository, please cite the following paper:
 
 ```
-@inproceedings{goncalves2023supervising,
-  title = {Supervising the Centroid Baseline for Extractive Multi-Document Summarization},
-  booktitle = {Proceedings of The 4th New Frontiers in Summarization (with LLMs) Workshop},
-  author = {Simão Gonçalves and Gonçalo Correia and Diogo Pernes and Afonso Mendes},
-  year = {2023},
-  url = {https://arxiv.org/abs/2311.17771}
+@inproceedings{goncalves-etal-2023-supervising,
+    title = "Supervising the Centroid Baseline for Extractive Multi-Document Summarization",
+    author = "Gon{\c{c}}alves, Sim{\~a}o  and
+      Correia, Gon{\c{c}}alo  and
+      Pernes, Diogo  and
+      Mendes, Afonso",
+    booktitle = "Proceedings of the 4th New Frontiers in Summarization Workshop",
+    month = dec,
+    year = "2023",
+    address = "Hybrid",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.newsum-1.9",
+    pages = "87--96",
 }
+
 ```
