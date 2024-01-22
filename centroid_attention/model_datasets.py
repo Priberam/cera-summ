@@ -298,6 +298,7 @@ class MultiNewsDataModule(MyDataModuleBaseClass):
     def train_dataloader(self):
         train_dataloader = DataLoader(
             self.train_dataset,
+            shuffle=True,
             batch_size=self.batch_size,
             collate_fn=DataCollator(self.num_positional_embeddings),
             num_workers=4,
@@ -486,6 +487,7 @@ class CrossSumDataModule(MyDataModuleBaseClass):
     def train_dataloader(self):
         train_dataloader = DataLoader(
             self.train_dataset,
+            shuffle=True,
             batch_size=self.batch_size,
             collate_fn=DataCollator(self.num_positional_embeddings),
             num_workers=4,
